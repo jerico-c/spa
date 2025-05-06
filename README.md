@@ -10,8 +10,8 @@ spa-pertama/
 ├── index.html # Halaman utama
 ├── README.md # Dokumentasi proyek
 ├── scripts/ # Folder untuk file JavaScript
-│ ├── index.js # Logika utama aplikasi SPA
-│ └── routes/ # Folder untuk routing aplikasi (struktur modular)
+│ ├── routes/ # Folder untuk routing aplikasi (struktur modular)
+│ └── index.js # Logika utama aplikasi SPA
 ├── styles/ # Folder untuk file CSS
   └── styles.css # Gaya untuk aplikasi
 ```

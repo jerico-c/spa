@@ -1,20 +1,10 @@
-import { getActiveRoute } from './routes/url-parser.js';
-import routes from './routes/routes.js';
+async renderPage() {
+  const routeName = getActiveRoute();
+  const route = routes[routeName];
  
-export default class App {
-  #content;
+  // Get page instance
+  const page = route();
  
-  constructor({ content }) {
-    this.#content = content;
-  }
- 
-  async renderPage() {
-    const routeName = getActiveRoute();
-    const route = routes[routeName];
- 
-    // Get page instance
-    const page = route();
- 
-    this.#content.innerHTML = await page.render();
-  }
+  this.#content.innerHTML = await page.render();
+  await page.afterRender();
 }
